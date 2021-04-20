@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="64dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="32dp"
+            android:paddingLeft="32dp"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/EnterConnectionLabel"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/host"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/hostPlaceholder"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:text="@string/hostDefault" />
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/port"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:hint="@string/portPlaceholder"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:text="@string/portDefault" />
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/startConnection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/startButtonText"
+                    android:backgroundTint="@color/tfe_color_primary"
+                    android:textColor="@color/whiteColor" />
+            </LinearLayout>
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/EnterDetectionLabel"
+                android:textSize="18sp" />
+
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+
+            <Button
+                android:id="@+id/startDetection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/EnterRecognitionButton"
+                android:backgroundTint="@color/tfe_color_primary"
+                android:onClick="startDetection"
+                android:textColor="@color/whiteColor" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
